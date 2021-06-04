@@ -26,4 +26,4 @@
   </script>
 ```
 
-# 更多详见 `move.js-demo.html` 和 `cubeRotate.html`
+## 更多详见 `move.js-demo.html` 和 `cubeRotate.html`
