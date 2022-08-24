@@ -1,0 +1,12 @@
+{
+  "name": "sao-move",
+  "version": "1.0.0",
+  "description": "鼠标、触摸处理类；封装原生 `Touch events`、`MouseEvent` 事件",
+  "main": "src/move.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
