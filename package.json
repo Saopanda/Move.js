@@ -1,8 +1,8 @@
 {
-  "name": "sao-move",
+  "name": "sao_move",
   "version": "1.0.0",
   "description": "鼠标、触摸处理类；封装原生 `Touch events`、`MouseEvent` 事件",
-  "main": "src/move.js",
+  "main": "src/sao_move.js",
   "scripts": {
     "test": ""
   },

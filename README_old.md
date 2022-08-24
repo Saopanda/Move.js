@@ -3,7 +3,7 @@
 
 # example
 ```
-  <script src="./move.js"></script>
+  <script src="./sao_move.js"></script>
   <script> 
   new Move({
       element:document.getElementById('ID'),
@@ -26,4 +26,4 @@
   </script>
 ```
 
-## 更多详见 `move.js-demo.html` 和 `cubeRotate.html`
+## 更多详见 `sao_move.js-demo.html` 和 `cubeRotate.html`

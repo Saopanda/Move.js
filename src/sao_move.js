@@ -1,4 +1,4 @@
-export default class Move {
+export default class SaoMove {
   //  鼠标拖拽
   mouse_down = false
   //  鼠标历史坐标点
@@ -98,12 +98,6 @@ export default class Move {
       this.touch_total[identifier].x = total_x
       this.touch_total[identifier].y = total_y
 
-      // res[identifier] = {
-      //   moving_x  : moving_x,
-      //   moving_y  : moving_y,
-      //   total_x : total_x,
-      //   total_y : total_y
-      // }
       let res = {
         type    : 'touch',
         event   : 'moving',

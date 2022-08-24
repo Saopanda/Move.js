@@ -4,7 +4,7 @@
 传入要监听的对象即可
 
 ```javascript
-new Move({
+new SaoMove({
   element: this.$refs.app, // 要监听的 DOM 对象
   TouchMove: (e) => {
     console.log(e)      //  触摸回调函数
