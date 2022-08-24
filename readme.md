@@ -1,4 +1,3 @@
-
 封装原生 `Touch events`、`MouseEvent` 事件
 
 ### 使用简单

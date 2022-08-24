@@ -6,7 +6,11 @@
   "scripts": {
     "test": ""
   },
-  "keywords": [],
+  "keywords": ["touch"],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Saopanda/Move.js.git"
+  }
 }
