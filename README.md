@@ -1,6 +1,6 @@
 封装原生 `Touch events`、`MouseEvent` 事件
 ### 安装
-```
+```shell
 npm install sao_move
 ```
 
@@ -8,16 +8,10 @@ npm install sao_move
 传入要监听的对象即可
 
 ```javascript
-import SaoMove from "sao_move";
+const elecomnt = this.$refs.app
 
-new SaoMove({
-  element: this.$refs.app, // 要监听的 DOM 对象
-  TouchMove: (e) => {     //  触摸回调函数
-    console.log(e)      
-  },
-  MouseMove: (e) => {     //  鼠标拖拽回调函数
-    console.log(e)     
-  },
+new SaoMove(elecomnt, (e) => {
+    console.log(e)
 })
 ```
 ### 回调参数内容
@@ -39,7 +33,7 @@ new SaoMove({
 |------------|---------|-----------------------|
 | type       | 移动类型    | touch / mouse         |   
 | event      | 事件类型    | start / moving / stop |
-| identifier | 触摸手指标识  | 数字标识，mouse类型无此字段      |
+| identifier | 触摸手指标识  | 数字标识，鼠标类型为0           |
 | x          | 实时`x`坐标 |                       |
 | y          | 实时`y`坐标 |                       |
 | moving_x   | 实时`x`位移 |                       |

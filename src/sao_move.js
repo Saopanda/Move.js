@@ -11,19 +11,12 @@ export default class SaoMove {
   touch_total = {0:{x:0,y:0}};
 
   /**
-   *
-   * @param element
-   * @param TouchMove
-   * @param MouseMove
+   * @param Element 监听对象
+   * @param MoveEvent 回调函数
    */
-  constructor({
-                element,
-                TouchMove,
-                MouseMove
-              }) {
-    this.element = element;
-    this.MouseMove = MouseMove;
-    this.TouchMove = TouchMove;
+  constructor(Element, MoveEvent) {
+    this.element = Element;
+    this.MoveEvent = MoveEvent;
 
     this.element.addEventListener("touchstart", e => {
       this.touchStart(e);
@@ -74,7 +67,7 @@ export default class SaoMove {
         total_x : 0,
         total_y : 0,
       }
-      this.TouchMove(res);
+      this.MoveEvent(res);
     }
   }
   /**
@@ -109,7 +102,7 @@ export default class SaoMove {
         total_x,
         total_y,
       }
-      this.TouchMove(res);
+      this.MoveEvent(res);
     }
   }
 
@@ -132,7 +125,7 @@ export default class SaoMove {
         total_x : this.touch_total[identifier].x,
         total_y : this.touch_total[identifier].y,
       }
-      this.TouchMove(res);
+      this.MoveEvent(res);
     }
   }
   /**
@@ -144,9 +137,10 @@ export default class SaoMove {
     this.total.x = this.total.y = 0
     this.last_point = {x:e.x, y:e.y}
     this.mouse_down = true
-    this.MouseMove({
+    this.MoveEvent({
       type    : 'mouse',
       event  :   'start',
+      identifier  : 0,
       x : e.x,
       y : e.y,
       moving_x  : 0,
@@ -161,17 +155,18 @@ export default class SaoMove {
    */
   mouseMove(e){
     if (!this.mouse_down) return
-    const new_poit = {x:e.x, y:e.y}
+    const new_point = {x:e.x, y:e.y}
     //  实时位移量
-    const moving_x = new_poit.x - this.last_point.x
-    const moving_y = new_poit.y - this.last_point.y
+    const moving_x = new_point.x - this.last_point.x
+    const moving_y = new_point.y - this.last_point.y
     //  累加位移量
     this.total.x += moving_x
     this.total.y += moving_y
-    this.last_point = new_poit
-    this.MouseMove({
+    this.last_point = new_point
+    this.MoveEvent({
       type    : 'mouse',
       event   : 'moving',
+      identifier  : 0,
       x : e.x,
       y : e.y,
       moving_x,
@@ -186,9 +181,10 @@ export default class SaoMove {
    */
   mouseStop(e){
     this.mouse_down = false
-    this.MouseMove({
+    this.MoveEvent({
       type    : 'mouse',
       event   : 'stop',
+      identifier  : 0,
       x : e.x,
       y : e.y,
       moving_x  : 0,

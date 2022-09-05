@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<style>
+    #box{
+        width: 600px;
+        height: 300px;
+        border: 2px dashed;
+        padding: 20px;
+        border-radius: 6px;
+        margin: 50px;
+        text-align: center;
+    }
+</style>
+
+<div id="box">
+    监视区域
+</div>
+
+<script  type="module">
+    import SaoMove from "../src/sao_move.js";
+    const $object = document.getElementById('box');
+    new SaoMove($object,(e)=>{
+        $object.innerHTML = "类型：" + e.type + "</br>" +
+            "事件：" + e.event + "</br>" +
+            "手指：" + e.identifier + "</br>" +
+            "x：" + e.x + "；Y：" + e.y + "</br>" +
+            "实时X：" + e.moving_x + "；实时Y：" + e.moving_x + "</br>" +
+            "累计X：" + e.total_x + "；累计Y：" + e.total_y + "</br>"
+    })
+</script>
+
+</body>
+</html>
