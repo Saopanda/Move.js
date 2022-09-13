@@ -25,7 +25,8 @@ new SaoMove(elecomnt, (e) => {
     "moving_x": 0,
     "moving_y": 0,
     "total_x": 0,
-    "total_y": 0
+    "total_y": 0,
+    "e": "原生事件"
 }
 ```
 
@@ -51,3 +52,7 @@ new SaoMove(elecomnt, (e) => {
 * `identifier`
 
 通过`identifier`来区分每个手指单独的 start、moving、stop，多手指互不干扰
+
+
+### 更新
+* 2.1 新增返回原生事件

@@ -66,6 +66,7 @@ export default class SaoMove {
         moving_y  : 0,
         total_x : 0,
         total_y : 0,
+        e: e
       }
       this.MoveEvent(res);
     }
@@ -101,6 +102,7 @@ export default class SaoMove {
         moving_y,
         total_x,
         total_y,
+        e: e
       }
       this.MoveEvent(res);
     }
@@ -124,6 +126,7 @@ export default class SaoMove {
         moving_y  : 0,
         total_x : this.touch_total[identifier].x,
         total_y : this.touch_total[identifier].y,
+        e: e
       }
       this.MoveEvent(res);
     }
@@ -146,7 +149,8 @@ export default class SaoMove {
       moving_x  : 0,
       moving_y  : 0,
       total_x : this.total.x,
-      total_y : this.total.y
+      total_y : this.total.y,
+      e: e
     });
   }
   /**
@@ -172,7 +176,8 @@ export default class SaoMove {
       moving_x,
       moving_y,
       total_x : this.total.x,
-      total_y : this.total.y
+      total_y : this.total.y,
+      e: e
     });
   }
   /**
@@ -190,7 +195,8 @@ export default class SaoMove {
       moving_x  : 0,
       moving_y  : 0,
       total_x : this.total.x,
-      total_y : this.total.y
+      total_y : this.total.y,
+      e: e
     });
   }
 }
