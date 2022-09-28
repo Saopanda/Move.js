@@ -1,4 +1,8 @@
 封装原生 `Touch events`、`MouseEvent` 事件
+
+* 使回调数据结构只有一维，多手指触摸单独回调处理更方便
+* 提供了坐标、实时位移量、累计位移量
+
 ### 安装
 ```shell
 npm install sao_move
